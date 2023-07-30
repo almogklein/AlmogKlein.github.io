@@ -11,8 +11,83 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Add the following CSS code for the sticky contact bar and article layout -->
+		<style>
+			#contact-bar {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: #5c5a5a;
+				padding: 10px 0;
+				border-top: 1px solid #ddd;
+				text-align: center;
+				z-index: 100; /* Ensure the contact bar stays above other elements */
+			}
+
+			#contact-bar ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			#contact-bar li {
+				display: inline;
+				margin-right: 20px;
+			}
+
+			#contact-bar a {
+				color: #ffffff;
+			}
+
+			/* Adjust space between article titles and text */
+			.posts article header {
+				margin-bottom: 0.3em;
+			}
+
+			/* Reduce text size in the intro */
+			#intro h1 {
+				font-size: 2.5em;
+			}
+
+			#intro p {
+				font-size: 0.95em;
+			}
+
+			/* Ensure each article is displayed in one row */
+			.posts article {
+				flex-basis: 100%;
+			}
+
+			/* Adjust the order of elements in the article */
+			.posts article .image {
+				order: 3;
+			}
+
+			.posts article header {
+				order: 1;
+			}
+
+			.posts article p {
+				order: 2;
+			}
+		</style>
+		<!-- End of the sticky contact bar CSS -->
 	</head>
 	<body class="is-preload">
+
+		<!-- Contact details (Sticky) -->
+		<div id="contact-bar">
+			<ul class="info">
+				<li>
+					<a href="tel:+972547456755">Phone |</a>
+					<a href="mailto:almogklein.16@gmail.com"> Email </a>
+				</li>
+				<li><a href="https://medium.com/@almogklein.16" class="icon brands fa-medium">Medium</a></li>
+				<li><a href="https://www.linkedin.com/in/almog-klein/" class="icon brands fa-linkedin">LinkedIn</a></li>
+				<li><a href="https://github.com/almogklein" class="icon brands fa-github">GitHub</a></li>
+			</ul>
+		</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">

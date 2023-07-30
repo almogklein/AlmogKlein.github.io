@@ -11,68 +11,114 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Add the following CSS code for the sticky contact bar and article layout -->
+		<style>
+			#contact-bar {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: #5c5a5a;
+				padding: 10px 0;
+				border-top: 1px solid #ddd;
+				text-align: center;
+				z-index: 100; /* Ensure the contact bar stays above other elements */
+			}
+
+			#contact-bar ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			#contact-bar li {
+				display: inline;
+				margin-right: 20px;
+			}
+
+			#contact-bar a {
+				color: #ffffff;
+			}
+
+			/* Adjust space between article titles and text */
+			.posts article header {
+				margin-bottom: 0.3em;
+			}
+
+			/* Reduce text size in the intro */
+			#intro h1 {
+				font-size: 2.5em;
+			}
+
+			#intro p {
+				font-size: 0.95em;
+			}
+
+			/* Ensure each article is displayed in one row */
+			.posts article {
+				flex-basis: 100%;
+			}
+
+			/* Adjust the order of elements in the article */
+			.posts article .image {
+				order: 3;
+			}
+
+			.posts article header {
+				order: 1;
+			}
+
+			.posts article p {
+				order: 2;
+			}
+		</style>
+		<!-- End of the sticky contact bar CSS -->
 	</head>
 	<body class="is-preload">
 
+		<!-- Contact details (Sticky) -->
+		<div id="contact-bar">
+			<ul class="info">
+				<li>
+					<a href="tel:+972547456755">Phone |</a>
+					<a href="mailto:almogklein.16@gmail.com"> Email </a>
+				</li>
+				<li><a href="https://medium.com/@almogklein.16" class="icon brands fa-medium">Medium</a></li>
+				<li><a href="https://www.linkedin.com/in/almog-klein/" class="icon brands fa-linkedin">LinkedIn</a></li>
+				<li><a href="https://github.com/almogklein" class="icon brands fa-github">GitHub</a></li>
+			</ul>
+		</div>
+
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Almog Klein - Portfolio<br /></h1>
-						<p><strong><big>Data scientist | Electronics Engineer | Galactic Problem-Solver</big></strong></p>
-						<p><br />M.Sc. degree in Intelligent Systems Engineering (B.Sc. EEE) with experience in research, development, tests, and evaluate data solutions, including applying Data Science methodology and working with AI/ML/DL methods. 
-							Proficient in statistics, algorithms, and deep learning models, utilizing a wide range of technological infrastructures. 
-							Experienced in using Jupyter, Git, Python (Pandas, NumPy, SciPy, Scikit-Learn, Keras, TensorFlow, PyTorch), Spark, and MATLAB to create robust data models. 
-							Strong teamwork, critical thinking skills, with the ability to communicate scientific data effectively.</p>
-						
-							<!-- <br /><ul class="actions">
-								<br /><li><a href="about1.html" class="logo">About</a></li>
-							</ul> -->
-					</div>
+			<!-- Intro -->
+			<div id="intro" class="smaller-text">
+				<h1>Almog Klein - Portfolio<br /></h1>
+				<p><strong><big>Data scientist | Electronics Engineer | Galactic Problem-Solver</big></strong></p>
+				<p><br />M.Sc. degree in Intelligent Systems Engineering (B.Sc. EEE) with experience in research, development, tests, and evaluate data solutions, including applying Data Science methodology and working with AI/ML/DL methods. 
+					Proficient in statistics, algorithms, and deep learning models, utilizing a wide range of technological infrastructures. 
+					Experienced in using Jupyter, Git, Python (Pandas, NumPy, SciPy, Scikit-Learn, Keras, TensorFlow, PyTorch), Spark, and MATLAB to create robust data models. 
+					Strong teamwork, critical thinking skills, with the ability to communicate scientific data effectively.</p>
+			</div>
 
-				<!-- Header -->
-					<!-- <header id="header">
-						<a href="about1.html" class="logo">About</a>
-					</header> -->
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="index.html">Projects</a></li>
+					<li><a href="posts.html">Posts</a></li>
+					<li><a href="about1.html">About</a></li>
+				</ul>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="posts.html">Posts</a></li>
-							<li><a href="about1.html">About</a></li>
-						</ul>
-
-						<ul class="icons">
-							<li><a href="https://medium.com/@almogklein.16" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
-							<li><a href="https://www.linkedin.com/in/almog-klein/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/almogklein" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-
-						<ul class="info">
-							<li><a href="tel:+972547456755">Phone |</a>
-							<a href="mailto:almogklein.16@gmail.com">  Email </a></li>
-						</ul>
-						
-					</nav>
+				<ul class="icons">
+					<li><a href="https://medium.com/@almogklein.16" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
+					<li><a href="https://www.linkedin.com/in/almog-klein/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+					<li><a href="https://github.com/almogklein" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
 
 				<!-- Main -->
 					<div id="main">
-
-						<!-- Featured Post
-							<article class="post featured">
-								<header class="major">
-									<span class="date">2023</span>
-									<h2><a href="https://github.com/almogklein/RASA_BOT_">Rasa Bootstrap Chatbot</a></h2>
-									<p>A bootstrapped chatbot built using the open-source conversational AI platform, Rasa. This chatbot has access to both Google Sheets and the OpenAI ChatGPT API, making it a powerful tool for generating answers to a wide range of questions.</p>
-								</header>
-								<a href="https://github.com/almogklein/RASA_BOT_" class="image"><img src="images\rasa_bot.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/almogklein/RASA_BOT_" class="button large">GitHub Repository</a></li>
-								</ul>
-							</article> -->
-						<!-- Posts -->
 							<section class="posts">
 								<article>
 									<header>
@@ -81,36 +127,10 @@
 											ChatGPT + Google Sheets
 										</a></h2>
 									</header>
-								<a href="https://github.com/almogklein/RASA_BOT_" class="image fit"><img src="images\rasa_bot.jpg" alt="" /></a>
-								<p><br /><br /><br /><br />A bootstrapped chatbot built using the open-source conversational AI platform, Rasa. This chatbot has access to both Google Sheets and the OpenAI ChatGPT API, making it a powerful tool for generating answers to a wide range of questions.</p>
-
-								<ul class="actions special">
-									<li><a href="https://github.com/almogklein/RASA_BOT_" class="button large">GitHub Repository</a></li>
-								</ul>
-								</article>
-
-								<article>
-									<header>
-										<!-- <span class="date">2023</span> -->
-										<h2><a href="https://github.com/almogklein/Computer_vision_course_-_classical_algorithms_to_neural_networks">Course: Classical Image Processing</a></h2>
-									</header>
-									<a href="https://github.com/almogklein/Computer_vision_course_-_classical_algorithms_to_neural_networks" class="image fit"><img src="images/Image_Processing.jpg" alt="" /></a>
-									<p>This course taught by PhD Chen Sagiv from SagivTech, which focuses on classical computer vision methods with an emphasis on before the Deep era.
-										This course is designed for students who are interested in learning about image processing techniques that have been used for several decades in the field of computer vision.</p>
+									<p>A bootstrapped chatbot built using the open-source conversational AI platform, Rasa. This chatbot has access to both Google Sheets and the OpenAI ChatGPT API, making it a powerful tool for generating answers to a wide range of questions.</p>
+									<a href="https://github.com/almogklein/RASA_BOT_" class="image fit"><img src="images\rasa_bot.jpg" alt="" /></a>
 									<ul class="actions special">
-										<li><a href="https://github.com/almogklein/Computer_vision_course_-_classical_algorithms_to_neural_networks" class="button">GitHub Repository</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<!-- <span class="date">2022</span> -->
-										<h2><a href="https://github.com/almogklein/THR_Audio_Classification">Medical decision support system: Total hip replacement using acoustic profiles</a></h2>
-									</header>
-									<br /><a href="https://github.com/almogklein/THR_Audio_Classification" class="image fit"><img src="images/thr.jpg" alt="" /></a>
-									<br /> <p>A study was conducted on hip replacement surgery using audio analysis to distinguish between the final hits of early and late broach. Data from 31 THR surgeries was collected and analyzed using a heuristic algorithm to extract features from the audio recordings. The goal is to develop a machine learning model that can classify the final hits of the first and last broach. The results showed that the algorithm performed well and improved understanding of the raw data.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/almogklein/THR_Audio_Classification" class="button">GitHub Repository</a></li>
+										<li><a href="https://github.com/almogklein/RASA_BOT_" class="button large">GitHub Repository</a></li>
 									</ul>
 								</article>
 
@@ -119,8 +139,8 @@
 										<!-- <span class="date">2022</span> -->
 										<h2><a href="https://github.com/almogklein/Odor_Classification">Analysis, labeling, reduction of dimension, visualization and clustering of smells according to different smell groups</a></h2>
 									</header>
-									<a href="https://github.com/almogklein/Odor_Classification" class="image fit"><img src="images/pca.jpg" alt="" /></a>
 									<p>I wrote two articles, "In a Good Smell Part 1" and "In a Good Smell Part 2," to share my work on smell classification. I collected a dataset of various odors and used machine learning techniques to train a model to classify these odors. During the process, I faced challenges such as the high dimensionality of the odor data and the difficulty of obtaining labeled data for odor classification, but I was able to overcome these challenges. In the end, I was proud to present the results of my model, which showed promising accuracy in odor classification.</p>
+									<a href="https://github.com/almogklein/Odor_Classification" class="image fit"><img src="images\pca.jpg" alt="" /></a>
 									<ul class="actions special">
 										<li><a href="https://github.com/almogklein/Odor_Classification" class="button">GitHub Repository</a></li>
 									</ul>
@@ -131,63 +151,63 @@
 										<!-- <span class="date">2022</span> -->
 										<h2><a href="https://github.com/almogklein/KaggleSurvey_2022_-_Data_analysis">KaggleBusters 2022 Kaggle Machine DS & ML Survey Analysis</a></h2>
 									</header>
-									<a href="https://github.com/almogklein/KaggleSurvey_2022_-_Data_analysis" class="image fit"><img src="images/ks.JPG" alt="" /></a>
 									<p>The work involved conducting a survey among Kaggle participants to gather information about their data preparation practices and the tools they use in data science. The survey results revealed the most popular visualization libraries, programming languages, online platforms for learning, IDEs, computer vision algorithms, NLP algorithms, and ML algorithms used by the participants. The results provide valuable insights into the data preparation practices and tool preferences of Kaggle users.</p>
+									<a href="https://github.com/almogklein/KaggleSurvey_2022_-_Data_analysis" class="image fit"><img src="images\ks.JPG" alt="" /></a>
 									<ul class="actions special">
-										<li><a href="https://github.com/almogklein/Odor_Classification" class="button">GitHub Repository</a></li>
+										<li><a href="https://github.com/almogklein/KaggleSurvey_2022_-_Data_analysis" class="button">GitHub Repository</a></li>
 									</ul>
 								</article>
-
-								
 							</section>
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Israel, Central Region</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="tel:+972547456755">(+972) 54-7456755</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:almogklein.16@gmail.com">almogklein.16@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://medium.com/@almogklein.16" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
-									<li><a href="https://www.linkedin.com/in/almog-klein/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/almogklein" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-							</form>
-						</section>
-					</footer>
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Israel, Central Region</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:+972547456755">(+972) 54-7456755</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:almogklein.16@gmail.com">almogklein.16@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://medium.com/@almogklein.16" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
+							<li><a href="https://www.linkedin.com/in/almog-klein/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/almogklein" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<!-- Your contact form here -->
+						</div>
+					</form>
+				</section>
+			</footer>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; almog-klein</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; almog-klein</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 			</div>
 
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
